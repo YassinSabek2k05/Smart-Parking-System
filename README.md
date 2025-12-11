@@ -1,4 +1,14 @@
 # 🅿️ Smart Parking System (FPGA & Arduino Integration)
+<div align="center">
+    <video src="Part2\Demo_Videos\Smart Parking System.mp4" 
+           controls 
+           width="600" 
+           muted 
+           loop 
+           style="max-width: 100%;">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
 ## Project Overview
 
