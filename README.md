@@ -1,14 +1,12 @@
 # 🅿️ Smart Parking System (FPGA & Arduino Integration)
-<div align="center">
-    <video src="Part2\Demo_Videos\Smart Parking System.mp4" 
-           controls 
-           width="600" 
-           muted 
-           loop 
-           style="max-width: 100%;">
-        Your browser does not support the video tag.
-    </video>
-</div>
+
+## 📺 Demo Video
+
+Watch the smart parking system in action:
+- **[Smart Parking System Demo](Part2/Demo_Videos/Smart%20Parking%20System.mp4)** - Full system demonstration
+- **[Simulation Video](Part2/Demo_Videos/Simulation_Video.mp4)** - VHDL simulation waveforms
+
+---
 
 ## Project Overview
 
@@ -77,19 +75,42 @@ This protocol ensures system stability and safety during an emergency:
 
 -----
 
-## 📂 Repository Structure
+## 📂 Project Structure
 
 ```
-smart_parking_system/
-├── src/
-│   ├── VHDL/              # FPGA VHDL source files (FSM, Top Level, Debouncer)
-│   ├── Arduino/           # Arduino sketch (.ino) for sensor monitoring/threshold
-├── doc/
-│   └── project_report.pdf # Full project documentation
-├── test/
-│   └── simulation_waveforms.vhd
-└── README.md
+Smart Parking System/
+├── README.md                          # Project documentation
+├── Part1/                             # Digital clock design (preliminary exercise)
+│   ├── digital_clock.vhd             # VHDL source for digital clock
+│   ├── tb_digital_clock.vhd          # Testbench for digital clock
+│   └── simulation_waveform.pdf       # Simulation waveform results
+│
+└── Part2/                             # Smart Parking System (main project)
+    ├── Project_Report.pdf            # Complete project documentation
+    ├── Pin_Assignments.csv           # FPGA pin configuration
+    ├── Pin_Assignments.xlsx          # FPGA pin configuration (Excel)
+    ├── Demo_Videos/                  # System demonstrations
+    │   ├── Smart Parking System.mp4  # Full system demo
+    │   └── Simulation_Video.mp4      # VHDL simulation video
+    └── source_code/                  # Implementation files
+        ├── smartparking.vhd          # Main FPGA VHDL code (FSM & logic)
+        ├── seg7_0to8_only.vhd        # 7-segment display driver
+        └── smokesensor.ino           # Arduino sketch for smoke sensor monitoring
 ```
+
+### File Descriptions
+
+#### Part1: Digital Clock
+- **digital_clock.vhd** - Implements a digital clock counter in VHDL
+- **tb_digital_clock.vhd** - Testbench for verification and simulation
+- **simulation_waveform.pdf** - Results from simulation showing correct behavior
+
+#### Part2: Smart Parking System
+- **smartparking.vhd** - Core FPGA implementation containing the FSM, debouncer, and control logic
+- **seg7_0to8_only.vhd** - Driver for 7-segment LED display (shows available parking spots)
+- **smokesensor.ino** - Arduino firmware for reading the MQ-2 smoke/gas sensor and communicating hazard status to FPGA
+- **Pin_Assignments** - Maps VHDL signals to physical FPGA pins on the DE10-Lite board
+- **Project_Report.pdf** - Full technical report with circuit diagrams, timing analysis, and design rationale
 
 -----
 
